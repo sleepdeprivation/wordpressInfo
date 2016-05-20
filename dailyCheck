@@ -1,0 +1,5 @@
+
+#!/bin/bash
+python checkHacks.py > temp
+awk -f replacer.awk badWords.dict temp | mail -s "Daily Hacking Report" ??@??.com
+rm temp
